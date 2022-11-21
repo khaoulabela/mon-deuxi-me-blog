@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>Animalerie blog</title>
+        <meta charset="utf-8">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body>
+    
+        <div class="header">Bienvenue à l'Animalerie </div>
+        <div class="total">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+         </div>
+    </body>
+</html>

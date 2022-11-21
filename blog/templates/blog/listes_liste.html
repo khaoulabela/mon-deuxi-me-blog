@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div class="container pdy">
+        <!-- Animals Section-->
+        <div class="animals">
+            <div class="section-header ">
+                <h2 class="section-title ">Liste des animaux</h2>
+                <span class="section-line"></span>
+            </div> <!-- section-header-->
+            <div class="animals-content"> <!-- to avoid float problems-->
+                {% for animal in animals %}
+                    <div class="animals-item">
+                            <img src="{{animal.photo}}" class="animals-image" alt="{{ animal.id_equip}}">
+                            <div class="animals-layer">
+                                <div class="layer-info">
+                                    <p class="layer-category">{{animal.id_animal}}</p>
+                                    <h3 class="layer-title">{{ animal.etat}}</h3>
+                                    <p class="layer-lieu">{{ animal.lieu}}</p>
+                                </div>
+                            </div><!-- animals-layer-->
+                    </div><!-- animals-item-->
+                {% endfor %}
+            </div><!-- content-->
+        </div><!-- animals-->
+
+    <!-- Equipements Section-->
+
+        <div class="equipements">
+            <div class="section-header ">
+                <h2 class="section-title ">Liste des équipements</h2>
+                <span class="section-line"></span>
+            </div> <!-- section-header-->
+            <div class="equipements-content"> <!-- to avoid float problems-->
+                {% for equipement in equipements %}
+                    <div class="equipements-item">
+                            <div class="equipements-layer">
+                                <div class="layer-info">
+                                    <img src="{{equipement.photo}}" class="equipements-image" alt="{{ equipement.id_equip}}">
+                                    <p class="layer-category">{{equipement.id_equip}}</p>
+                                    <h3 class="layer-title"><a href="#">{{ equipement.disponibilite}}</a></h3>
+                                </div>
+                            </div><!-- equipements-layer-->
+                    </div><!-- equipements-item-->
+                {% endfor %}
+            </div><!-- content-->
+        </div><!-- equipements-->
+    </div><!-- container-->
+
+
+{% endblock %}

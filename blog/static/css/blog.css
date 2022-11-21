@@ -1,0 +1,241 @@
+/*General*/
+.pdy{
+    padding: 120px 0; /* espace en haut et en bas des sections*/
+}
+.section-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-header .section-title{
+    color: #D2691E;
+    font-size: 30px;
+    text-transform: capitalize; /*Majuscule*/
+    margin-bottom: 10px;/*espace entre le titre et la ligne*/
+}
+.section-header .section-line{
+    display: block;
+    height: 4px;
+    width: 70px;
+    background-color: bisque;
+    margin: 0 auto 70px auto;/* top right bottom left*/
+    /*margin: auto; centrer un élément qui a un width*/
+}
+
+.container{
+    background-color: burlywood;
+    overflow: hidden;
+
+}
+
+.header{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    background-color: burlywood;
+}
+
+/*Animal Section*/
+.animals{
+    width: 50%;
+    float: left;
+    border: 1px solid #888 ;
+
+
+}
+.animals-content{
+    overflow: hidden;
+
+}
+.animals-item{
+    width: 30%;
+    height: 60px;
+    float: left;
+    border: 2px solid #888;
+    position: relative;
+    padding: 20px;
+    background-color:#D2691E;
+    margin: 8% 2%;
+
+}
+.animals-image{
+    width: 100%;
+    
+}
+.animals-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.animals-item:hover .animals-layer{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s, visibility .5s;
+
+}
+.animals-layer .layer-info{
+    text-align: center;
+    position: absolute;
+    /*hero image effect : centrer un élément % à un élément */
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);/*le centre du 2ème elt soit le même que du 1er*/
+
+}
+.animals-layer .layer-category{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.2s;/* va s'afficher sans attendre*/
+
+}
+
+.animals-layer .layer-title{
+    font-size: 20px;
+    color:  #D2691E;
+    margin-bottom: 15px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3s;/* va s'afficher après un délai*/
+}
+.animals-layer .layer-lieu{
+    font-size: 20px;
+    color:  darkred;
+    margin-bottom: 15px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3s;/* va s'afficher après un délai*/
+}
+
+
+.animals-item:hover .layer-category,
+.animals-item:hover .layer-title,
+.animals-item:hover .layer-lieu{
+    top: 0;
+    opacity: 1;
+}
+
+/*Equipements Section*/
+.equipements{
+    width: 40%;
+    float: left;
+    border: 1px solid #888 ;
+    margin-left: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.equipements-content{
+    overflow: hidden;
+
+}
+.equipements-item{
+    width: 30%;
+    height: 60px;
+    float: left;
+    border: 1px solid #888;
+    position: relative;
+    padding: 30px;
+    background-color: #D2691E;
+    margin: 8% 2%;
+
+}
+.equipements-image{
+    width: 100%;
+
+}
+.equipements-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+
+}
+.equipements-layer .layer-category{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 1;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.2s;/* va s'afficher sans attendre*/
+
+}
+.equipements-item:hover .equipements-layer{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s, visibility .5s;
+
+}
+.equipements-layer .layer-info{
+    text-align: center;
+    position: absolute;
+    /*hero image effect : centrer un élément % à un élément */
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);/*le centre du 2ème elt soit le même que du 1er*/
+
+}
+.equipements-layer .layer-category{
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.2s;/* va s'afficher sans attendre*/
+
+}
+.equipements-layer .layer-title{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3s;/* va s'afficher après un délai*/
+}
+.layer-info a{
+    font-size: 20px;
+    color:  darkred;
+    margin-bottom: 15px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+    transition-delay: 0.3s;/* va s'afficher après un délai*/
+
+}
+
+.equipements-item:hover .layer-category,
+.equipements-item:hover .layer-title,
+.equipements-item:hover .layer-info a {
+    top: 0;
+    opacity: 1;
+}
